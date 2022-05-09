@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <!--
+        This is the library that provides websocket streaming pub/sub
+        The dev serverver is serving the html and javascript, but it also provides updating fx data on /fx/prices.
+            -->
+        <script src="stomp.js"></script>
+        <script src="sparkline.js"></script>
+    </head>
+    <body>
+        <section class="content">
+            
+            <h3>My Information</h3>
+            <p>
+                <strong>Name:</strong> Tiago Costa</span>
+            </p>
+            <p>
+                <strong>E-mail:</strong> tiago.costa@kodly.io </span>
+            </p>
+            
+            <button id="button">
+                <a target="_blank" href="mailto:tiago.costa@kodly.io">
+                    Send Email
+                </a>
+            </button>
+
+            <h3>Description</h2>
+            <p>
+                The solution was a dictionary with currency pair as key, which is being updated.
+                The table is sorted by number of changes in desc order. Last column has a sparkLine chart with the last 30 seconds updated every second.
+            </p>
+    
+        </section>
+        <section>
+            <table>
+                <thead id="bid-header">
+                </thead>
+                <tbody id="bid-body">
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Code you write in index.js and anything it depends on will be bundled into bundle.js and
+            is included here -->
+        <script src="bundle.js"></script>
+
+    </body>
+</html>
